@@ -209,55 +209,6 @@ section h2 {
   content: "NEW ";
 }
 
-body.detail-page {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
-                    url("https://image.tmdb.org/t/p/w1280/xJHokMbljv3P1R8C4y3R82.jpg");
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  min-height: 100vh;
-}
-
-.back-link {
-  margin-bottom: 20px;
-  font-size: 0.95rem;
-}
-
-.back-link a {
-  color: var(--accent);
-}
-
-.detail {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: var(--gap);
-  background-color: rgba(31, 43, 68, 0.85);
-  padding: 24px;
-  border-radius: 16px;
-  backdrop-filter: blur(8px);
-}
-
-.detail-poster img {
-  width: 100%;
-  border-radius: 12px;
-  display: block;
-}
-
-.detail-info dl {
-  display: grid;
-  grid-template-columns: 80px 1fr;
-  gap: 12px 16px;
-}
-
-.detail-info dt {
-  font-weight: bold;
-  color: var(--accent);
-}
-
-.detail-info dd {
-  margin-left: 0;
-}
-
 footer {
   background-color: var(--surface);
   padding: 24px 16px;
@@ -265,26 +216,11 @@ footer {
   font-size: 0.8rem;
   opacity: 0.8;
   margin-top: 40px;
-  footer-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 footer p {
   margin-bottom: 6px;
-}
-
-@media (min-width: 600px) {
-  .header-container {
-    flex-direction: row;
-    justify-content: space-between;
-  }
-
-  .board {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .detail {
-    grid-template-columns: 1fr 2fr;
-  }
 }
 
 @media (min-width: 600px) {
@@ -302,6 +238,11 @@ footer p {
     grid-template-columns: 1fr 2fr;
   }
 }
+
+@media (min-width: 1024px) {
+  .hero {
+    height: 60vh;
+  }
 
   .board {
     grid-template-columns: repeat(4, 1fr);
